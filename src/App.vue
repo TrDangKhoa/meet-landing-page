@@ -3,15 +3,19 @@
 </template>
 <script>
 import "tailwindcss/tailwind.css";
+import "@/styles/index.css";
 export default {};
 </script>
 
 <style>
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  color: #ffffff;
+  height: 100%;
+  min-height: 100vh;
+  background: #0a0c1c;
 }
 </style>
