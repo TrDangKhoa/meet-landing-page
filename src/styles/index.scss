@@ -1,0 +1,337 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;500;600;700;900&display=swap");
+body {
+  font-family: "Red Hat Display";
+  font-size: 16px;
+  line-height: normal;
+  font-weight: 400;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+h1,
+h2,
+p {
+  margin: 0;
+}
+h1,
+h2,
+h3 {
+  color: #28283d;
+  font-weight: 900;
+}
+p {
+  line-height: 26px;
+  color: #87879d;
+  font-weight: 500;
+}
+
+.flex {
+  display: flex;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.top-logo {
+  padding-top: 48px;
+}
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+  margin-top: 54px;
+  &__images {
+    object-fit: contain;
+    width: 50%;
+  }
+  &__content {
+    margin: 48px 24px 0;
+    order: 1;
+    flex: 2;
+    &__header {
+      font-size: 40px;
+      line-height: 44px;
+      padding: 0 28px;
+    }
+    &__paragraph {
+      margin-top: 24px;
+      margin-bottom: 32px;
+    }
+  }
+  &__btns {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+  }
+}
+
+.btn {
+  display: inline-block;
+  border-radius: 29px;
+  text-decoration: none;
+  color: white;
+  padding: 16px 0;
+  text-align: center;
+  user-select: none;
+  line-height: 26px;
+  font-weight: 900;
+  &--primary {
+    width: 193px;
+  }
+  &--secondary {
+    width: 139px;
+  }
+  &--green {
+    background-color: #4d96a9;
+    &:hover {
+      background-color: #71c0d4;
+    }
+  }
+  &--purple {
+    background-color: #855fb1;
+    &:hover {
+      background-color: #b18bdd;
+    }
+  }
+  &__subtext {
+    margin-left: 4px;
+    &--green {
+      color: #8fe3f9;
+    }
+    &--pruple {
+      color: #d9b8ff;
+    }
+  }
+}
+
+.serial-number {
+  width: 56px;
+  height: 56px;
+  text-align: center;
+  padding: 15px 0;
+  background-color: #fafafa;
+  border: 1px solid rgba(135, 135, 157, 0.25);
+  border-radius: 29px;
+  line-height: 26px;
+  font-weight: 900;
+  color: #87879d;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  &::before {
+    content: "";
+    width: 0px;
+    height: 84px;
+    border-left: 1px solid rgba(135, 135, 157, 0.25);
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+  }
+}
+
+.details {
+  position: relative;
+  margin-top: 148px;
+  padding: 64px 24px 0;
+  &__images {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(2, minmax(151px, 252px));
+    margin-bottom: 64px;
+    gap: 24px;
+    img {
+      object-fit: contain;
+      border-radius: 8px;
+      width: 100%;
+      height: 100%;
+    }
+  }
+  &__content {
+    text-align: center;
+    &__header {
+      font-size: 32px;
+      line-height: 36px;
+      margin-bottom: 32px;
+      &--secondary {
+        text-transform: uppercase;
+        font-size: 16px;
+        line-height: 26px;
+        letter-spacing: 4px;
+        color: #4d96a9;
+        margin-bottom: 24px;
+      }
+    }
+  }
+}
+
+.footer {
+  background-color: #4d96a9;
+  position: relative;
+  z-index: 0;
+  margin-top: 176px;
+  padding: 92px 24px 72px;
+  text-align: center;
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-image: url(../assets/mobile/image-footer.jpg);
+    opacity: 0.1;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+  &__header {
+    font-size: 32px;
+    line-height: 36px;
+    color: #fafafa;
+    margin-bottom: 24px;
+  }
+  &__paragraph {
+    font-size: 18px;
+    color: #fafafa;
+    margin-bottom: 32px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .hero {
+    &__content {
+      margin: 72px 0 0;
+      &__header {
+        font-size: 48px;
+        line-height: 1;
+        padding: 0 28%;
+      }
+      &__paragraph {
+        padding: 0 20%;
+      }
+    }
+    &__btns {
+      flex-direction: row;
+      justify-content: center;
+    }
+  }
+  .details {
+    margin-top: 164px;
+    padding: 67px 39px 0;
+    &__images {
+      gap: 11px;
+      grid-template-columns: repeat(4, minmax(151px, 164px));
+      margin-bottom: 48px;
+    }
+    &__content {
+      &__header {
+        font-size: 40px;
+        line-height: 44px;
+        padding: 0 21%;
+        &--secondary {
+          margin-bottom: 16px;
+        }
+      }
+      &__paragraph {
+        padding: 0 8%;
+      }
+    }
+  }
+  .footer {
+    margin-top: 192px;
+    padding: 92px 12% 66px;
+    &::before {
+      background-image: url(../assets/tablet/image-footer.jpg);
+    }
+    &__header {
+      font-size: 40px;
+      line-height: 44px;
+      margin-bottom: 32px;
+    }
+    &__paragraph {
+      margin-bottom: 40px;
+    }
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .top-logo {
+    padding-top: 80px;
+  }
+
+  .hero {
+    margin-top: 62px;
+    &__images {
+      flex-wrap: nowrap;
+      width: 31%;
+      &--right {
+        order: 1;
+      }
+    }
+    &__content {
+      margin: 0;
+      &__header {
+        font-size: 64px;
+        line-height: 1;
+        padding: 0 40px;
+      }
+      &__paragraph {
+        margin-top: 34px;
+        padding: 0 30px;
+      }
+    }
+    &__btns {
+      flex-direction: row;
+      justify-content: center;
+    }
+  }
+
+  .details {
+    margin-top: 200px;
+    padding: 64px 0 0;
+    &__images {
+      grid-template-columns: repeat(4, minmax(164px, 255px));
+      margin-bottom: 80px;
+    }
+    &__content {
+      &__header {
+        padding: 0 35%;
+      }
+      &__paragraph {
+        font-size: 18px;
+        padding: 0 30%;
+      }
+    }
+  }
+  .footer {
+    margin-top: 184px;
+    padding: 116px 165px 104px;
+    &__content {
+      flex-direction: row;
+      align-items: center;
+      text-align: left;
+      justify-content: space-between;
+    }
+    &__header {
+      margin: 0;
+      width: 30%;
+    }
+    &__paragraph {
+      margin: 0;
+      width: 31%;
+    }
+  }
+}
